@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Metodları - Örnekler</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1><i class="fas fa-lightbulb"></i> String Metod Örnekleri</h1>
+        <p>Pratik örnekler ve çözümler</p>
+    </header>
+
+    <main class="container">
+        <div class="example-card">
+            <div class="example-header">
+                <h2><i class="fas fa-spaces"></i> Boşluk Sayacı</h2>
+                <p>Metin içerisindeki boşluk karakterlerini sayar</p>
+            </div>
+            
+            <div class="example-content">
+                <div class="input-section">
+                    <textarea id="spaceInput" placeholder="Metninizi buraya yazın..." class="example-input"></textarea>
+                    <div class="input-info">
+                        <span id="spaceCount">0 boşluk</span>
+                        <button id="countSpaces" class="try-btn">
+                            <i class="fas fa-calculator"></i> Boşlukları Say
+                        </button>
+                    </div>
+                </div>
+
+                <div class="result-section">
+                    <h3>Sonuçlar:</h3>
+                    <div class="result-grid">
+                        <div class="result-item">
+                            <span class="result-label">Toplam Boşluk:</span>
+                            <span id="totalSpaces" class="result-value">0</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-label">Baştaki Boşluklar:</span>
+                            <span id="leadingSpaces" class="result-value">0</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-label">Sondaki Boşluklar:</span>
+                            <span id="trailingSpaces" class="result-value">0</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-label">Orta Boşluklar:</span>
+                            <span id="middleSpaces" class="result-value">0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="back-button">
+            <a href="index.html" class="nav-btn">
+                <i class="fas fa-arrow-left"></i> Ana Sayfaya Dön
+            </a>
+        </div>
+    </main>
+
+    <script src="examples.js"></script>
+
+    <style>
+        .example-card {
+            background: #1a1a1a;
+            border-radius: 20px;
+            padding: 2rem;
+            margin: 2rem 0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        .example-header {
+            margin-bottom: 2rem;
+        }
+
+        .example-header h2 {
+            color: #00ff88;
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .example-content {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .example-input {
+            width: 100%;
+            min-height: 100px;
+            padding: 1rem;
+            background: #202020;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            resize: vertical;
+        }
+
+        .example-input:focus {
+            outline: none;
+            border-color: #00ff88;
+            box-shadow: 0 0 0 3px rgba(0, 255, 136, 0.2);
+        }
+
+        .result-section {
+            background: #202020;
+            padding: 1.5rem;
+            border-radius: 12px;
+        }
+
+        .result-section h3 {
+            color: #00ccff;
+            margin-bottom: 1rem;
+        }
+
+        .result-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .result-item {
+            background: #1a1a1a;
+            padding: 1rem;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .result-label {
+            color: #b3b3b3;
+            font-size: 0.9rem;
+        }
+
+        .result-value {
+            color: #00ff88;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .back-button {
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        @keyframes successPulse {
+            0% { 
+                transform: scale(1);
+                color: #ffffff;
+            }
+            50% {
+                transform: scale(1.1);
+                color: #00ff88;
+            }
+            100% { 
+                transform: scale(1);
+                color: #00ff88;
+            }
+        }
+    </style>
+</body>
+</html> 
